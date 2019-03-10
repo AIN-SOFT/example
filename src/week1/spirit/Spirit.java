@@ -1,5 +1,8 @@
 package week1.spirit;
 
+/**
+ * 2019.3.10
+ */
 interface
 Move {
     public String move();
