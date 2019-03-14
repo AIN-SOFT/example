@@ -27,7 +27,7 @@ public class DateAndTime {
         System.out.printf("Year : %d  Month : %d  day : %d t %n", year, month, day);
 
         //3.处理特定日期,  生日
-        LocalDate dateOfBirth = LocalDate.of(1997, 12, 29);
+        LocalDate dateOfBirth = LocalDate.of(2000, 3, 10);
         System.out.println("Your Date of birth is : " + dateOfBirth);
 
         //4.判断两个日期是否相等
