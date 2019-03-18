@@ -3,6 +3,8 @@ package week1;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Scanner;
+import java.lang.String;
 
 /**
  * 计算两个Date的差值
@@ -12,29 +14,46 @@ import java.util.Date;
 public class DateDifferentExample {
     public static void main(String[] args) {
         //分别定义起止时间
-        String startTime = "2019-03-17 06:31:58";
-        String stopTime = "2019-03-18 07:43:48";
+        String s1,s2;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("请输入打卡的时间");
+        s1 = scanner.nextLine();
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String date = format.format(new Date());
+        s2 = date;
         Date d1;
         Date d2;
         long diff = 0;
-//通过SimpleDateFormat的对象来把String类型的时间对象转化成Date类型的对象
+        //通过SimpleDateFormat的对象来把String类型的时间对象转化成Date类型的对象
         try {
-            d1 = format.parse(startTime);
-            d2 = format.parse(stopTime);
+            d1 = format.parse(s1);
+            d2 = format.parse(s2);
             //毫秒ms的差值
             diff = d2.getTime() - d1.getTime();
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        //将毫秒分别换算成秒、分、小时、天
+        //将毫秒分别换算成秒
         long diffSeconds = diff / 1000;
-        long diffMinutes = diff / (1000 * 60);
-        long diffHours = diff / (1000 * 60 * 60);
-        long diffDays = diff / (1000 * 60 * 60 * 24);
-        System.out.println("两个时间相差：" + Math.abs(diffSeconds) + "秒");
-        System.out.println("两个时间相差：" + Math.abs(diffMinutes) + "分");
-        System.out.println("两个时间相差：" + Math.abs(diffHours) + "小时");
-        System.out.println("两个时间相差：" + Math.abs(diffDays) + "天");
+
+        if (Math.abs(diffSeconds)< 120){
+            System.out.println("2分钟前");
+        }
+        else if(Math.abs(diffSeconds)> 300 && Math.abs(diffSeconds)< 3500){
+            System.out.println("5分钟前");
+        }
+        else if (Math.abs(diffSeconds)> 3500 && Math.abs(diffSeconds)< 7200){
+            System.out.println("1小时前");
+        }
+        else if(Math.abs(diffSeconds)> 7200 && Math.abs(diffSeconds)< 10800){
+            System.out.println("2小时前");
+        }
+        else if(Math.abs(diffSeconds)> 86400 && Math.abs(diffSeconds)< 172800){
+            System.out.println("1天前");
+        }
+        else if(Math.abs(diffSeconds)>172800 ){
+            System.out.println("2天前");
+        }
+        System.out.println("距离现在的时间:  "+Math.abs(diffSeconds)+" 秒");
     }
 }
