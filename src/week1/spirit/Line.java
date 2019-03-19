@@ -1,4 +1,4 @@
-package week1;
+package week1.spirit;
 
 import javax.imageio.ImageIO;
 import java.awt.*;

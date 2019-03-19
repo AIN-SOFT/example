@@ -1,4 +1,4 @@
-package week1;
+package week1.spirit;
 
 /**
  * String、StringBuffer、StringBuilder的比较

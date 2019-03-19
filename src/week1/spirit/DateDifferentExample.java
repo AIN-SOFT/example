@@ -1,4 +1,4 @@
-package week1;
+package week1.spirit;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -34,7 +34,7 @@ public class DateDifferentExample {
             e.printStackTrace();
         }
         //将毫秒分别换算成秒
-        long diffSeconds = diff / 1000;
+        long diffSeconds = diff/1000 ;
 
         if (Math.abs(diffSeconds)< 120){
             System.out.println("2分钟前");
