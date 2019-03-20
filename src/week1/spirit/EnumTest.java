@@ -49,16 +49,11 @@ class EnumSetTest {
         Week weekArray[] = Week.values();
         // 获取枚举数组
         for (Week k : weekArray) {
-            // foreach循环遍历枚举数组
             System.out.println(k + "——" + k.getName());
-            // 输出枚举名称及对应中文含义
         }
         System.out.print("查询星期：");
-        // 提示信息
         Scanner sc = new Scanner(System.in);
-        // 控制台输入
         Week week = Week.getWeek(sc.next());
-        // 根据输入获取枚举值
         switch (week) {
             case MONDAY:
                 System.out.println("MONDAY————" + week.getName());
