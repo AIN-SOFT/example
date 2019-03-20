@@ -1,4 +1,4 @@
-package week1;
+package week1.spirit;
 
 public class Ball implements Comparable<Ball>{
     private String type;

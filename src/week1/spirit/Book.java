@@ -1,4 +1,4 @@
-package week1;
+package week1.spirit;
 
 public class Book {
     private Integer id;
