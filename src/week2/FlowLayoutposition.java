@@ -27,7 +27,7 @@ public class FlowLayoutposition extends JFrame {
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
         setVisible(true);
-    }
+}
 
     public static void main(String[] args) {
         new FlowLayoutposition();
