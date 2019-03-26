@@ -9,17 +9,17 @@ import java.awt.*;
  * 2019.3.26
  */
 public class BorderLayoutTest extends JFrame {
-    public BorderLayoutTest(){
+public BorderLayoutTest(){
         setTitle("边界布局管理器");
         //定义一个容器
         Container c = getContentPane();
         //设置容器为边界布局管理器
         setLayout(new BorderLayout());
         JButton centerBtn = new JButton("中神通"),
-                northBtn = new JButton("北乞"),
-                southBtn = new JButton("南帝"),
-                westBtn = new JButton("西毒"),
-                eastBtn = new JButton("东邪");
+        northBtn = new JButton("北乞"),
+        southBtn = new JButton("南帝"),
+        westBtn = new JButton("西毒"),
+        eastBtn = new JButton("东邪");
         //中间添加按钮
         c.add(centerBtn,BorderLayout.CENTER);
         c.add(northBtn,BorderLayout.NORTH);
@@ -31,9 +31,9 @@ public class BorderLayoutTest extends JFrame {
         //设置窗体可见
         setVisible(true);
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-    }
+        }
 
-    public static void main(String[] args) {
+public static void main(String[] args) {
         new  BorderLayoutTest();
-    }
-}
+        }
+        }
