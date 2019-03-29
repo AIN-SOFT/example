@@ -1,8 +1,5 @@
 package week2;
 
-import com.sun.org.apache.xml.internal.security.Init;
-import sun.plugin.javascript.JSContext;
-
 import javax.swing.*;
 import java.awt.*;
 import java.io.File;

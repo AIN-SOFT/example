@@ -7,6 +7,8 @@ import java.awt.*;
 
 /**
  * 空布局管理器
+ * @author xupeng
+ * 2019.3.28
  */
 
 public class LoginFrame extends JFrame {
@@ -28,7 +30,7 @@ public class LoginFrame extends JFrame {
 
     }
     public  void init(){
-        Font font = new Font("微软雅黑",Font.PLAIN,18);
+        Font font = new Font("微软雅黑",Font.PLAIN,28);
         accoutLabel = new JLabel("账号");
         accoutLabel.setFont(font);
         accountField = new JTextField();
